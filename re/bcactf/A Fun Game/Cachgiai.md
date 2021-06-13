@@ -27,3 +27,9 @@ https://codebeautify.org/reverse-string
 ![alt text](https://i.imgur.com/DEZiI2v.png)
 
 key: bcactf{h0p3fu1ly_y0U_d1dNt_actUa1ly_tYpe_1000_1ett3rs}
+
+
+Cách 2 là sau khi mình đọc Hint :D, trước mình có dùng cheat engine hack game :D
+Các bạn xem thử Clip này để học cách dùng cheat engine nhá: https://www.youtube.com/watch?v=Td5Ah845dLo
+
+Tương tự bài này, sau khi nhập xong vài kí tự, mình lấy giá trị của biến đang lưu rồi đổi bằng cheat engine, lên 1000 là ra key!.
