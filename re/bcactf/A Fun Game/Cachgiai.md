@@ -12,7 +12,7 @@ Dùng ```file (Tên chương trình)``` trên linux, ta được:
 
 Mở bằng IDa 32bit (lưu ý mở bằng Microsoft.NET assembly nha, vì sao thì các bạn nhìn dòng trên ấy :D)
 
-![alt text]("https://i.imgur.com/nrhDQJc.png")
+![alt text](https://i.imgur.com/nrhDQJc.png)
 
 
 
