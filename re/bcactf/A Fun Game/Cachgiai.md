@@ -18,4 +18,4 @@ Mở bằng IDa 32bit (lưu ý mở bằng Microsoft.NET assembly nha, vì sao t
 
 Vào vùng chứa của biến đó, ta được:  <br/>
 
-https://i.imgur.com/1X0spIO.png
+![alt text] (https://i.imgur.com/1X0spIO.png)
