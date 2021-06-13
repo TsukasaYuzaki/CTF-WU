@@ -1,5 +1,6 @@
 **Digitally Encrypted 1**
 
+
 link download:
 [circuit_1.dig](https://objects.bcactf.com/bcactf2/digital1/circuit_1.dig)
 [encrypted.txt](https://objects.bcactf.com/bcactf2/digital1/encrypted.txt)
@@ -15,6 +16,7 @@ Có được key và 5 plain.
 Đó là kí hiệu của Xor! mình dùng Xor chuỗi có trong file encrypyed.txt (lưu ý chuyển về dạng 0x nhá!).
 
 Code python: 
+
 
 ```ruby
 key = [0xD4, 0xC7, 0x0F, 0x8A, 0x67, 0xD5, 0x45, 0x6D]
@@ -48,5 +50,53 @@ j = 0
 for tu in key:
     print (tu ^ f5[j])
     j = j + 1
-    ```
- Chạy đoạn code, ta được 
+
+```
+Chạy chương trình, ta được chuỗi:
+```
+98
+99
+97
+99
+116
+102
+123
+116
+104
+97
+116
+95
+119
+97
+115
+95
+112
+114
+101
+116
+116
+121
+95
+115
+105
+109
+112
+108
+101
+49
+50
+51
+57
+49
+53
+50
+55
+51
+53
+125
+```
+
+Convert nó từ ```dec``` sang ```string``` là được! 
+
+
+![alt text](https://i.imgur.com/cx2ohPP.jpg)
