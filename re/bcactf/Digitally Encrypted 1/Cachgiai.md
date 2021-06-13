@@ -100,3 +100,5 @@ Convert nó từ ```dec``` sang ```string``` là được!
 
 
 ![alt text](https://i.imgur.com/3dQNVUQ.png)
+
+key: bcactf{that_was_pretty_simple1239152735}
