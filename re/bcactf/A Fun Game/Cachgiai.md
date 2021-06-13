@@ -20,7 +20,7 @@ Vào vùng chứa của biến đó, ta được:  <br/>
 
 ![alt text](https://i.imgur.com/1X0spIO.png)
 
-Có vẻ như tác giả lười mã hóa flag nên chỉ để flag dưới dạng bị đảo ngược, copy 2 dòng ```text``` mà ta tìm được, nối lại với nhau, rồi sau đó đảo ngược chuỗi lại là ra key.
+Có vẻ như tác giả lười mã hóa flag nên chỉ để flag dưới dạng bị đảo ngược, copy 2 dòng ```text``` mà ta tìm được, nối lại với nhau, rồi sau đó đảo ngược chuỗi lại là ra key!
 
 https://codebeautify.org/reverse-string
 
