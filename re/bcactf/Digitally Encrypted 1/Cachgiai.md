@@ -9,3 +9,15 @@ Hint: https://github.com/hneemann/Digital
 Dùng cái link trong phần Hint, mở file circuit.dig, được cái hình này:
 
 ![alt text](https://i.imgur.com/cx2ohPP.jpg)
+
+Có được key và 5 plain.
+
+Đó là kí hiệu của Xor! mình dùng Xor chuỗi có trong file encrypyed.txt (lưu ý chuyển về dạng 0x nhá!).
+
+Code python: 
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
