@@ -3,7 +3,7 @@
 
 Dùng IDA 64bit mở file.
 
-Mở xong chả cần làm gì flag nó hiện lên trước mặt luôn. :D
+Mở xong chả cần làm gì flag nó hiện lên trước mặt luôn. :D <br/>
 ![alt text](https://i.imgur.com/7enw5lf.png)
-
+<br/>
 flag: bcactf{w0ol_m4k3s_str1ng_ziv4mk3ca91b}
