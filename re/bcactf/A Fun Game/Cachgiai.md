@@ -19,3 +19,11 @@ Mở bằng IDa 32bit (lưu ý mở bằng Microsoft.NET assembly nha, vì sao t
 Vào vùng chứa của biến đó, ta được:  <br/>
 
 ![alt text](https://i.imgur.com/1X0spIO.png)
+
+Có vẻ như tác giả lười mã hóa flag nên chỉ để flag dưới dạng bị đảo ngược, copy 2 dòng ```text``` mà ta tìm được, nối lại với nhau, rồi sau đó đảo ngược chuỗi lại là ra key.
+
+https://codebeautify.org/reverse-string
+
+![alt text](https://i.imgur.com/DEZiI2v.png)
+
+key: bcactf{h0p3fu1ly_y0U_d1dNt_actUa1ly_tYpe_1000_1ett3rs}
