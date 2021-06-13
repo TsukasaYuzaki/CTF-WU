@@ -1,4 +1,4 @@
-Đầu tiên dùng lệnh ```file story``` trong linux:<br/>
+Đầu tiên mình dùng lệnh ```file (Tên chương trình)``` trong linux:<br/>
 ```story: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=ccea544c84172f60a939819e4416fdd108982090, for GNU/Linux 3.2.0, not stripped```
 
 Dùng IDA 64bit mở file.
