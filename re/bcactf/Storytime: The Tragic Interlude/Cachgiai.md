@@ -14,9 +14,12 @@ Vào hàm ```main```, ta thấy 1 đoạn dài các lệnh ```[mov rbp+var_x], y
 
 
 ![alt_text](https://i.imgur.com/bf6wpQH.png)
-sdasd
+<br/>
 (Trường hợp nếu bạn không có IDA pro (Chắc không xảy ra đâu ._.))
 
-Chịu khó nhập từng giá trị hex được mov (ở bên phải) vào dòng 
+Chịu khó nhập từng giá trị hex được mov (ở bên phải) vào dòng IDC để chuyển nhanh sang từ hex sang dec <br/>
 
+![alt_text](https://i.imgur.com/EyPWQjD.png)
+<br/>
 
+Lưu giá trị các bạn có được vao 1 mảng
