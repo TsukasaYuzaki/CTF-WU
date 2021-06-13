@@ -144,4 +144,4 @@ Chạy chương trình, được: <br/>
 
 ![alt_text](https://i.imgur.com/15MVP2F.png)
 
-key: bcactf{th4t_0th3r_dr4g0n_76fw8kc1lav}
+Flag: bcactf{th4t_0th3r_dr4g0n_76fw8kc1lav}
