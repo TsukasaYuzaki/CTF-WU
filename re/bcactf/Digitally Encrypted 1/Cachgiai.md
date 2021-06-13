@@ -99,4 +99,4 @@ Chạy chương trình, ta được chuỗi:
 Convert nó từ ```dec``` sang ```string``` là được! 
 
 
-![alt text](https://i.imgur.com/cx2ohPP.jpg)
+![alt text](https://i.imgur.com/3dQNVUQ.png)
