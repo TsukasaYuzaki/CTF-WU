@@ -22,7 +22,7 @@ Vào hàm ```main```, ta thấy 1 đoạn dài các lệnh ```[mov rbp+var_x], y
 Decompile bằng IDA, ta được mảng
 
 ```python
-v6[36] = 179;
+    v6[36] = 179;
     v6[14] = 180;
     v6[6] = 235;
     v6[13] = 207;
