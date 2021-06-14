@@ -119,5 +119,57 @@ Sau đó mình để ý đoạn
 ```
 
 Rõ ràng Flag được mã hóa từ mảng ```v7```, nhưng vấn đề là tác giả không gán giá trị gì cho ```v5```, nhưng lại có đoạn code ```v5[i - 1] = *((unsigned __int8 *)&v5[31] + i + 1);```, (mảng ```v5``` mới chỉ được định nghĩa chứ chưa được gán giá trị)<br/>
-Đọc đoạn code trên thấy rõ flag chúng ta nhập vào được lưu trong mảng ```v5```, và lệnh ``` if ( v5[i - 1] != v7[i - 1] )``` so sánh ```strings``` nhập vào (sau đó chuyển sang ASCII) rồi so sánh với ```v7```
-                                                                                     
+Đọc đoạn code trên thấy rõ flag chúng ta nhập vào được lưu trong mảng ```v5```, và lệnh ``` if ( v5[i - 1] != v7[i - 1] )``` so sánh ```strings``` nhập vào (sau đó chuyển sang ```dec``` (decimal)) rồi so sánh với ```v7```<br/>
+
+Để ý ```v5[i - 1] += i;``` trước lệnh so sánh với mảng ```v7``` => flag của ta sẽ là các phần tử của ```v7 - i```
+
+
+Code C++:
+
+```C
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    char v7[30];
+  v7[0] = 99;
+  v7[1] = 101;
+  v7[2] = 100;
+  v7[3] = 103;
+  v7[4] = 121;
+  v7[5] = 108;
+  v7[6] = 130;
+  v7[7] = 110;
+  v7[8] = 57;
+  v7[9] = 124;
+  v7[10] = 127;
+  v7[11] = 126;
+  v7[12] = 65;
+  v7[13] = 92;
+  v7[14] = 110;
+  v7[15] = 121;
+  v7[16] = 70;
+  v7[17] = 113;
+  v7[18] = 118;
+  v7[19] = 68;
+  v7[20] = 132;
+  v7[21] = 101;
+  v7[22] = 71;
+  v7[23] = 132;
+  v7[24] = 150;
+  int i, k = 1;;
+     for (i = 0; i<25; i++){
+        v7[i] = ((int)v7[i] - k);
+        k++;
+        cout << v7[i] << "";
+     }
+    return 0;
+}
+```
+(Ở đây mình để mảng v7 kiểu ```char``` để nó tự convert từ ```dec``` sang ```string``` luôn :D)
+Chạy chương trình, ta được:
+
+![alt_text](https://i.imgur.com/x5UXxBz.png)
+
+flag: bcactf{f0rtr4N_i5_c0oO0l}
