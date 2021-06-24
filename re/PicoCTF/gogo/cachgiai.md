@@ -120,3 +120,8 @@ ok giờ chạy chương trình:
 
 ![alt_text](https://i.imgur.com/Nj9atPc.png)
 
+Để ý cái string mà ta thu được ban đầu là mã hash md5, lên mạng convert nó về string thường: https://md5hashing.net/hash
+
+![alt_text](https://i.imgur.com/WI3LqYS.png)
+
+
