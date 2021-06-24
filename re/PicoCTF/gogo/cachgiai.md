@@ -90,7 +90,8 @@ Mình sẽ xem mã hex trong [esp+20]
 
 Vì key chúng ta cần nhập có 32 ký tự, nên chúng ta lấy 2 dòng 1 thử, và trong lần thử thứ 2 bằng 2 dòng:
 
-```4a 53 47 5d 41 45 03 54 5d 02 5a 0a 53 57 45 0d
+   ```
+   4a 53 47 5d 41 45 03 54 5d 02 5a 0a 53 57 45 0d
    05 00 5d 55 54 10 01 0e 41 55 57 4b 45 50 46 01
    ```
 Thì cho ra string có nghĩa:
