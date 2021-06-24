@@ -49,7 +49,7 @@ Mình quyết định đặt breakpoint(f2) ở đây
 
 ![alt_text](https://i.imgur.com/bRudzdK.png)
 
-Chuyển sang chế độ xem bằng phím [space], mình thu được địa chỉ của lệnh:
+Chuyển sang chế độ xem bằng phím [space], mình thu được địa chỉ của lệnh: 0x80D4B28(Nhớ để dấy x ở sau số 0 đầu tiên)
 
 ![alt_text](https://i.imgur.com/LdVIksY.png)
 
@@ -59,3 +59,6 @@ Mình không debug bằng IDA vì nó dễ dính virus :v thay vào đó mình d
 
 ![alt_text](https://i.imgur.com/4YUUsXw.png)
 
+Sau đó đặt breakpint bằng lệnh:
+
+![alt_text](https://i.imgur.com/Lb3htjg.png)
