@@ -124,4 +124,9 @@ ok giờ chạy chương trình:
 
 ![alt_text](https://i.imgur.com/WI3LqYS.png)
 
+Ok done! 
+
+![alt_text](https://i.imgur.com/P5VrV1v.png)
+
+flag: picoCTF{p1kap1ka_p1c02720c216}
 
