@@ -87,3 +87,19 @@ Sau khi đặt breakpoint, mình muốn xem hexdump của thanh esp (stack point
 Mình sẽ xem mã hex trong [esp+20]
 
 ![alt_text](https://i.imgur.com/wpvhb7R.png)
+
+Vì key chúng ta cần nhập có 32 ký tự, nên chúng ta lấy 2 dòng 1 thử, và trong lần thử thứ 2 bằng 2 dòng:
+
+```4a 53 47 5d 41 45 03 54 5d 02 5a 0a 53 57 45 0d
+   05 00 5d 55 54 10 01 0e 41 55 57 4b 45 50 46 01
+   ```
+Thì cho ra string có nghĩa:
+
+(Cách làm):
+
+Đầu tiên mình chuyển hết 2 chuỗi ra ```bin```: http://string-functions.com/string-binary.aspx
+
+![alt_text](https://i.imgur.com/ICEfMDe.png)
+
+String đầu tiên có mã ```bin``` là: ```C
+0011100000110110001100010011100000110011001101100110011000110001001100110110010100110011011001000011011000110010001101110110010001100110011000010011001100110111001101010110001001100100011000100011100000110011001110000011100100110010001100010011010001100101```
