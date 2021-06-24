@@ -34,6 +34,9 @@ oid __cdecl main_checkPassword(string input, bool _r1)
   }
 }
 ```
+Để ý lệnh: ``` if ( (unsigned int)v2 >= input.len || (unsigned int)v2 >= 0x20 )```
+
+key chúng ta nhập vào sẽ có độ dài >= 0x20 (CHuyển từ ```hex``` sang ```dec``` thì là 32) kí tự, nếu nhập ngắn hơn thì chương trình sẽ thoát luôn mà không xử lý gì
 
 Tiếp sau đó mình để ý trong danh sách có các hàm:
 
@@ -62,3 +65,12 @@ Mình không debug bằng IDA vì nó dễ dính virus :v thay vào đó mình d
 Sau đó đặt breakpint bằng lệnh:
 
 ![alt_text](https://i.imgur.com/Lb3htjg.png)
+
+chạy chương trình bằng lệnh ```run```
+
+Như đã nói ở trên :V key phải có ít nhất 32 ký tự nên mình nhập đúng 32 cái vào
+
+![alt_text](]https://i.imgur.com/zo9v27k.png)
+
+Giờ chương trình đã dừng đúng sau lúc xor 2 thanh ebp và esi
+
