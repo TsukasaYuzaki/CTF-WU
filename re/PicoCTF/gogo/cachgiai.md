@@ -52,7 +52,7 @@ Mình quyết định đặt breakpoint(f2) ở đây
 
 ![alt_text](https://i.imgur.com/bRudzdK.png)
 
-Chuyển sang chế độ xem bằng phím [space], mình thu được địa chỉ của lệnh: 0x80D4B28(Nhớ để dấy x ở sau số 0 đầu tiên)
+Chuyển sang chế độ xem bằng phím [space], mình thu được địa chỉ của lệnh: 0x80D4B28 (Nhớ để dấu x ở sau số 0 đầu tiên)
 
 ![alt_text](https://i.imgur.com/LdVIksY.png)
 
