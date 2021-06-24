@@ -38,3 +38,7 @@ oid __cdecl main_checkPassword(string input, bool _r1)
 Tiếp sau đó mình để ý trong danh sách có các hàm:
 
 ![alt_text](https://i.imgur.com/RrFShpu.png)
+
+Quay sang tab IDA view, có đoạn code:
+
+![alt_text](https://i.imgur.com/JKpf785.png)
