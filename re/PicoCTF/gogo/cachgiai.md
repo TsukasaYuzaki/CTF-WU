@@ -114,3 +114,9 @@ Ok! giờ xor 2 cái với nhau: http://xor.pw/#
 
 ![alt_text](https://i.imgur.com/4jh28Wk.png)
 
+Có được key là: reverseengineericanbarelyforward
+
+ok giờ chạy chương trình: 
+
+![alt_text](https://i.imgur.com/Nj9atPc.png)
+
