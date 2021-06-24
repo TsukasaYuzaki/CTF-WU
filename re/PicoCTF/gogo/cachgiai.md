@@ -62,7 +62,7 @@ Mình không debug bằng IDA vì nó dễ dính virus :v thay vào đó mình d
 
 ![alt_text](https://i.imgur.com/4YUUsXw.png)
 
-Sau đó đặt breakpint bằng lệnh:
+Sau đó đặt breakpoint bằng lệnh:
 
 ![alt_text](https://i.imgur.com/Lb3htjg.png)
 
