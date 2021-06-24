@@ -74,3 +74,16 @@ Như đã nói ở trên :V key phải có ít nhất 32 ký tự nên mình nh�
 
 Giờ chương trình đã dừng đúng sau lúc xor 2 thanh ebp và esi
 
+Quay lại 2 hàm hex bên trên, thấy được key của chúng ta sẽ được mã hóa từ 2 chuỗi hex sau đó xor lại với nhau
+
+chuỗi đầu tiên là chuỗi key: 861836f13e3d627dfa375bdb8389214e
+
+chuỗi tiếp theo là chuỗi chúng ta đang tìm
+
+Sau khi đặt breakpoint, mình muốn xem hexdump của thanh esp (stack pointer)
+
+Để ý lệnh ```movzx   esi, [esp+eax+44h+var_20]``` sau lệnh xor.
+
+Mình sẽ xem mã hex trong [esp+20]
+
+![alt_text](https://i.imgur.com/wpvhb7R.png)
