@@ -4,7 +4,7 @@ Mở file bằng IDa 32 bit, đi vào hàm ```main.checkPassword```:
 
 ![alt_text](https://i.imgur.com/DFiQFe2.png)
 
-Decompile hàm này, thu được chuỗi ```861836f13e3d627dfa375bdb8389214e```
+Decompile hàm này, thu được key ```861836f13e3d627dfa375bdb8389214e```
 
 ```C
 oid __cdecl main_checkPassword(string input, bool _r1)
@@ -39,6 +39,23 @@ Tiếp sau đó mình để ý trong danh sách có các hàm:
 
 ![alt_text](https://i.imgur.com/RrFShpu.png)
 
-Quay sang tab IDA view, có đoạn code:
+Quay sang tab IDA view(vẫn đang trong hàm ```main.checkPassword```), có đoạn code:
 
 ![alt_text](https://i.imgur.com/JKpf785.png)
+
+Lệnh ```xor     ebp, esi``` sẽ xor giá trị của 2 thanh ghi ebp và esi, trong đó mình đoán key bên trên chúng ta thu được (861836f13e3d627dfa375bdb8389214e) nằm trong thanh esi, còn thanh base pointer(ebp) sẽ là giá trị hex nằm trong ngăn xếp (stack) (Vì bên trên mình thấy mấy hàm encode hex)
+
+Mình quyết định đặt breakpoint(f2) ở đây
+
+![alt_text](https://i.imgur.com/bRudzdK.png)
+
+Chuyển sang chế độ xem bằng phím [space], mình thu được địa chỉ của lệnh:
+
+![alt_text](https://i.imgur.com/LdVIksY.png)
+
+Mình không debug bằng IDA vì nó dễ dính virus :v thay vào đó mình dùng GDB trên linux
+
+(Máy mình có cài thêm cái gef rồi, nhưng không có cũng chả sao)
+
+![alt_text](https://i.imgur.com/4YUUsXw.png)
+
