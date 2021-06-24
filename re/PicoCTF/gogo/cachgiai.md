@@ -70,7 +70,7 @@ chạy chương trình bằng lệnh ```run```
 
 Như đã nói ở trên :V key phải có ít nhất 32 ký tự nên mình nhập đúng 32 cái vào
 
-![alt_text](]https://i.imgur.com/zo9v27k.png)
+![alt_text](https://i.imgur.com/zo9v27k.png)
 
 Giờ chương trình đã dừng đúng sau lúc xor 2 thanh ebp và esi
 
