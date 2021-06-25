@@ -69,5 +69,18 @@ Giờ mình mới để ý đoạn code trong file chall.S:
  
  Để ý input chúng ta nhập vào được chứa trong thanh ```rdi```
  
+ Nhưng sau đó mình thấy 1 vấn đề nhỏ
  
+ ![alt_text](https://i.imgur.com/4Rpxp1k.png)
+ 
+ Tái sao tác giả phải dùng tới ```strlen```, mặc dù đã biết flag có 49 ký tự? hay là do cái ```strlen``` này không phải 49, mà là của 1 trong 2 cái string trên kia
+ 
+Như mình đã nói ở trên, input của chúng ta chứa trong thanh ```rdi```, đế ý trước lệnh ```call  strlen@PLT``` có lệnh ```movq %rax, %rdi``` (movq với thanh ghi 64bit, movl với thanh 32bit), tức là thanh rax giờ đang chứa input của chúng ta, nên giờ mình sẽ chuyển 49 kí tự trực tiếp vào thanh eax(1 nửa của thanh rax)
 
+Giờ mình có thể bỏ lệnh ```call  strlen@PLT```, thay vào đó là lệnh ```movl $49, %eax```
+
+OK! giờ compile lại file từ bước gcc, sau đó debug, đặt breakpoint là được flag!
+
+![alt_text](https://i.imgur.com/IFrPzBH.png)
+
+flag: picoCTF{dyn4m1c_4n4ly1s_1s_5up3r_us3ful_9266fa82}
