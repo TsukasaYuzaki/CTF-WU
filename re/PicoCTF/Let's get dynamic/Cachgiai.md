@@ -55,4 +55,6 @@ và tiến hành chạy chương trình: (bằng lệnh ```run```)
 
 ![alt_text](https://i.imgur.com/73k1HFM.png)
 
+Nhưng tuy nhiên sau khi nhập bừa vài key, mình chỉ nhận được 1 phần nhỏ của flag cần tìm, được ném vào thanh rsi
 
+![alt_text](https://i.imgur.com/TSvUk8P.png)
