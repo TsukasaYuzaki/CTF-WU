@@ -22,7 +22,7 @@ Trước tiên là phải compile file đã, vì đây mới là file code.
 
 Mình dùng gcc:
 
-```gcc -c chall.S```
+```gcc -c chall.S``` <br/>
 ```gcc chall.o -o chall```
 
 Giờ mình đã có file có thể xử lý được.
@@ -33,5 +33,6 @@ Giờ mình đã có file có thể xử lý được.
 
 Ok! giờ sử dụng GDB
 
+![alt_text](https://i.imgur.com/HI0eFNl.png)
 
 
