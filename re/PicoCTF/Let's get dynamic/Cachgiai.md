@@ -67,5 +67,7 @@ Giờ mình mới để ý đoạn code trong file chall.S:
 ```
  Có vẻ như hàm ```memcmp``` không so sánh đầy đủ 49 ký tự trong flag, mà chỉ dừng lại ở việc so sánh 12 kí tự đầu trong 49 ký tự của flag
  
- Để ý input chúng ta nhập vào được chứa trong thanh ```edx```
+ Để ý input chúng ta nhập vào được chứa trong thanh ```rdi```
+ 
+ 
 
