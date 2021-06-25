@@ -18,7 +18,7 @@ Ngoài ra còn có ```memcmp```, ```strlen``` và ```puts```
 
 Thấy có ```memcmp```, mình sẽ tìm địa chỉ và đặt breakpoint ở đây
 
-Trước đây là phải compile file đã, vì đây mới là file code.
+Trước tiên là phải compile file đã, vì đây mới là file code.
 
 Mình dùng gcc:
 
