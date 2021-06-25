@@ -11,3 +11,8 @@ mở file chall.S lên, mình để ý có đoạn code:
 ![alt+text](https://i.imgur.com/NjLp3QW.png)
 
 Thấy ```fget``` và ```stdin``` (Standard Input) => flag được nhập từ bàn phím và có 49 ký tự.
+
+Ngoài ra còn có ```memcmp```, ```strlen``` và ```puts```
+
+![alt_text](https://i.imgur.com/AK6LPIC.png)
+
