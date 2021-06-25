@@ -16,3 +16,22 @@ Ngoài ra còn có ```memcmp```, ```strlen``` và ```puts```
 
 ![alt_text](https://i.imgur.com/AK6LPIC.png)
 
+Thấy có ```memcmp```, mình sẽ tìm địa chỉ và đặt breakpoint ở đây
+
+Trước đây là phải compile file đã, vì đây mới là file code.
+
+Mình dùng gcc:
+
+```gcc -c chall.S```
+```gcc chall.o -o chall```
+
+Giờ mình đã có file có thể xử lý được.
+
+[!alt_text](https://i.imgur.com/5XFAflF.png)
+
+(Đương nhiên 123 không phải là flag chúng ta đang tìm rồi)
+
+Ok! giờ sử dụng GDB
+
+
+
