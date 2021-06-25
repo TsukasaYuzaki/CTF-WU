@@ -47,5 +47,12 @@ Phát hiện ```memcmp``` nằm ở địa chỉ: ```0x5555555552e9```
 
 ![alt_text](https://i.imgur.com/Xvy20C5.png)
 
+Giờ đặt breakpoint ở đây:
+
+![alt_text](https://i.imgur.com/mkfzSCi.png)
+
+và tiến hành chạy chương trình: (bằng lệnh ```run```)
+
+![alt_text](https://i.imgur.com/73k1HFM.png)
 
 
