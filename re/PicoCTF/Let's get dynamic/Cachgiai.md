@@ -27,7 +27,7 @@ Mình dùng gcc:
 
 Giờ mình đã có file có thể xử lý được.
 
-[!alt_text](https://i.imgur.com/5XFAflF.png)
+![alt_text](https://i.imgur.com/5XFAflF.png)
 
 (Đương nhiên 123 không phải là flag chúng ta đang tìm rồi)
 
