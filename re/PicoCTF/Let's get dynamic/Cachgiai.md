@@ -58,3 +58,13 @@ và tiến hành chạy chương trình: (bằng lệnh ```run```)
 Nhưng tuy nhiên sau khi nhập, mình chỉ nhận được 1 phần nhỏ của flag cần tìm, được ném vào thanh rsi
 
 ![alt_text](https://i.imgur.com/TSvUk8P.png)
+
+Giờ mình mới để ý đoạn code trong file chall.S:
+
+```.string "\207\312\304\371\307m\2753&V\035A"
+   .string "\231]\314~\025\345\225\343\177\013M\214\034SJG\246i\372\026\0323@\033jW\204\370\311}\221\350T\236pr"
+```
+ Có vẻ như hàm ```memcmp``` không so sánh đầy đủ 49 ký tự trong flag, mà chỉ dừng lại ở việc so sánh 12 kí tự đầu trong 49 ký tự của flag
+ 
+ Để ý input chúng ta nhập vào được chứa trong thanh ```edx```
+
