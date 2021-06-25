@@ -35,4 +35,17 @@ Ok! giờ sử dụng GDB
 
 ![alt_text](https://i.imgur.com/HI0eFNl.png)
 
+Trước tiên mình chạy để GDB nạp bộ nhớ
+
+![alt_text](https://i.imgur.com/fnvC6St.png)
+
+(Thứ chúng ta cần tìm giờ là địa chỉ của ```memcmp```)
+
+Vì đã xác định đây là chương trình C, nên chắc chắn phải có hàm ```main```, mình dùng lệnh: ```x/100i main``` để xác định 100 lệnh sau hàm ```main```
+
+Phát hiện ```memcmp``` nằm ở địa chỉ: ```0x5555555552e9```
+
+![alt_text](https://i.imgur.com/Xvy20C5.png)
+
+
 
