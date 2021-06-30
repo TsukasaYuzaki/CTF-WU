@@ -28,4 +28,4 @@ Thường chúng ta sẽ làm việc vối hệ cơ số 10, nên chúng ta cầ
 
 Được số: 333333, và đó cũng chính là flag.
 
-flag: CTFlearn(333333)
+flag: CTFlearn{333333}
