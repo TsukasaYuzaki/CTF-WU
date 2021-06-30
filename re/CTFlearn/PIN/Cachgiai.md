@@ -1,3 +1,5 @@
-element {
-  font-size: 75;
-} sd
+<style>
+  .markdown-body table td {
+    font-size: 12px !important;
+  }
+</style>
