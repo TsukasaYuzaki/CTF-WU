@@ -48,7 +48,7 @@ byte_402A = 0xD6
 ```
 => Chúng ta cần XOR từng giá trị có được với 0xAB, sau đó chuyển sang kiểu ```char```, đó chính là flag cần tìm, nhưng lại phát sinh một vấn đề nhỏ, đó là mỗi chuỗi sau khi XOR đều bị đảo ngược, chúng ta chỉ cần đảo ngược chuỗi một lần nữa là được!
 
-code ```python```:
+code ```python```: (sorry mới học python nên code hơi ngáo)
 
 ```python
 data = [0xC5, 0xD9, 0xCA, 0xCE, 0xC7, 0xED, 0xFF, 0xE8]
@@ -83,3 +83,7 @@ print(chr(byte2a ^ key))
 
 ```
 chạy chương trình là ra flag
+
+![alt_text](https://i.imgur.com/DS4Mgvg.png)
+
+flag: CTFlearn{Eye_L0ve_Iceland_}
