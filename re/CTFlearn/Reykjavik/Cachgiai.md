@@ -46,3 +46,40 @@ byte_4028 = 0xCF
 byte_4029 = 0xF4    
 byte_402A = 0xD6
 ```
+=> Chúng ta cần XOR từng giá trị có được với 0xAB, sau đó chuyển sang kiểu ```char```, đó chính là flag cần tìm, nhưng lại phát sinh một vấn đề nhỏ, đó là mỗi chuỗi sau khi XOR đều bị đảo ngược, chúng ta chỉ cần đảo ngược chuỗi một lần nữa là được!
+
+code ```python```:
+
+```python
+data = [0xC5, 0xD9, 0xCA, 0xCE, 0xC7, 0xED, 0xFF, 0xE8]
+qword1 = [0xDD, 0x9B, 0xE7, 0xF4, 0xCE, 0xD2, 0xEE, 0xD0]
+qword2 = [0xC5, 0xCA, 0xC7, 0xCE, 0xC8, 0xE2, 0xF4, 0xCE]
+byte28 = 0xCF
+byte29 = 0xF4
+byte2a = 0xD6
+
+key = 0xAB
+
+flag1 = ''
+flag2 = ''
+flag3 = ''
+flag = ''
+for i in data:
+        flag1 += chr (i ^ key)
+
+for i in qword1:
+        flag2 += chr(i ^ key)
+
+for i in qword2:
+        flag3 += chr(i ^ key)
+        
+print(flag1[::-1])
+print(flag2[::-1])
+print(flag3[::-1])
+
+print(chr(byte28 ^ key))
+print(chr(byte29 ^ key))
+print(chr(byte2a ^ key))
+
+```
+chạy chương trình là ra flag
