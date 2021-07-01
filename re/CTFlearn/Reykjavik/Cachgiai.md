@@ -12,3 +12,6 @@ Tiếp theo đó mình để ý đoạn:
 
 Có biến lạ là: ```data```, ```qword_4018```, ```qword_4020```, ```qword_4028```,  ```qword_4029```,  ```qword_402A```
 
+Vào vùng nhớ của các biến này, được các giá trị hex:
+
+![alt_text](https://i.imgur.com/6mvps1t.png)
