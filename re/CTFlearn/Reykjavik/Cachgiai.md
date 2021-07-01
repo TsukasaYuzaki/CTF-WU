@@ -24,4 +24,25 @@ ta để ý lệnh: ```mov     rax, 0ABABABABABABABABh``` (Chữ h cuối cùng 
 
 thanh ```rax``` giờ đang giữ giá trị 0xABABABABABABABAB, và sau đó được XOR liên tiếp với các biến lạ trên kia.
 
+Nhưng tại sao lại cần đến một chuỗi AB dài như vậy, giờ để vùng nhớ của các biến lạ cũng được định nghĩa rất dài
 
+```
+0000000000004010                 public data
+.data:0000000000004010 data            dq 0C5D9CACEC7EDFFE8h   ; DATA XREF: main+5D↑r
+.data:0000000000004018 qword_4018      dq 0DD9BE7F4CED2EED0h   ; DATA XREF: main+83↑r
+.data:0000000000004020 qword_4020      dq 0C5CAC7CEC8E2F4CEh   ; DATA XREF: main+8D↑r
+.data:0000000000004028 byte_4028       db 0CFh                 ; DATA XREF: main+99↑r
+.data:0000000000004029 byte_4029       db 0F4h                 ; DATA XREF: main+AC↑r
+.data:000000000000402A byte_402A       db 0D6h                 ; DATA XREF: main+BA↑r
+```
+
+Chuyển về dạng 0x(chữ số)(chứ số) thì được độ dài bằng đúng chuỗi 0xAB...B
+
+```python
+data =       [0xC5, 0xD9, 0xCA, 0xCE, 0xC7, 0xED, 0xFF, 0xE8]
+qword_4018 = [0xDD, 0x9B, 0xE7, 0xF4, 0xCE, 0xD2, 0xEE, 0xD0]    
+qword_4020 = [0xC5, 0xCA, 0xC7, 0xCE, 0xC8, 0xE2, 0xF4, 0xCE]    
+byte_4028 = 0xCF    
+byte_4029 = 0xF4    
+byte_402A = 0xD6
+```
