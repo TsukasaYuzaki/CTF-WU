@@ -15,3 +15,13 @@ Có biến lạ là: ```data```, ```qword_4018```, ```qword_4020```, ```qword_40
 Vào vùng nhớ của các biến này, được các giá trị hex:
 
 ![alt_text](https://i.imgur.com/6mvps1t.png)
+
+Giờ quay lại đoạn:
+
+![alt_text](https://i.imgur.com/g1QJtS2.png)
+
+ta để ý lệnh: ```mov     rax, 0ABABABABABABABABh``` (Chữ h cuối cùng không quan tâm, đó chỉ là biểu thị của hex(cơ số 16))
+
+thanh ```rax``` giờ đang giữ giá trị 0xABABABABABABABAB, và sau đó được XOR liên tiếp với các biến lạ trên kia.
+
+
