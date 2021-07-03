@@ -133,3 +133,11 @@ Nhưng tuy nhiên sau khi vào hàm này mình chỉ thu được 1 dạy hex d�
 ![alt_text](https://i.imgur.com/6u7VaFI.png)
 
 Và đó cũng chính là tất cả những gì mình có thể làm với IDA
+
+# Sang Ghidra
+
+Mở file bằng Code Brower của Ghidra, tìm đến hàm ```InitData``` <br/>
+![alt_text](https://i.imgur.com/blBCx89.png)
+
+![alt_text](https://i.imgur.com/knYJVqx.png)
+
