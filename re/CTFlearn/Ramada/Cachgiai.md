@@ -97,4 +97,27 @@ v5 chính là flag chúng ta nhập vào từ bàn phím và v5[v8-1] = 125 tron
 # => Độ dài của flag có 31 ký tự.
 (trong đó chuỗi "CTFlearn{}" chiếm 10 ký tự, còn lại chúng ta cần tìm 21 ký tự)
 
+Tiếp theo đó mình để ý hàm ```CheckFlag(char const*)```
 
+Decompile hàm này, thu được:
+
+```C++
+__int64 __fastcall CheckFlag(const char *a1)
+{
+  __int64 i; // rax
+
+  for ( i = 0LL; i != 21; ++i )
+  {
+    if ( *((_DWORD *)&data + i) != a1[i] * a1[i] * a1[i] )
+    {
+      puts("No flag for you!");
+      return 4LL;
+    }
+  }
+  return 0LL;
+}
+```
+
+Số 21 chứng tỏ suy luaank trên là đúng :v 
+
+dòng   ```if ( *((_DWORD *)&data + i) != a1[i] * a1[i] * a1[i] )``` chứng tỏ flag của chúng ta là căn bậc 3 của chuỗi được nhập, trong đó biến data chính là nơi chứa flag.
