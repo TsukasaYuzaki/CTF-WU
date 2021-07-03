@@ -84,7 +84,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 
 Để ý lệnh code:
 
-```assembly
+```C
  v8 = strlen(v5);
       if ( v5[v8 - 1] == 125 )
       {
@@ -92,5 +92,9 @@ int __cdecl main(int argc, const char **argv, const char **envp)
         {
 ```
 
+v5 chính là flag chúng ta nhập vào từ bàn phím và v5[v8-1] = 125 trong đó v8 là số lượng ký tự có trong v5, số 125 trong ASCII là ký tự kết thúc của flag: ```}```
+
+# => Độ dài của flag có 31 ký tự.
+(trong đó chuỗi "CTFlearn{}" chiếm 10 ký tự, còn lại chúng ta cần tìm 21 ký tự)
 
 
