@@ -1,10 +1,10 @@
-# RAmada
+# Ramada
 
 This is a beginners Reversing Challenge. It is build with the optimization level set to 0 so that the assembler is more readable. If you are new to reversing, please remember that to solve Reversing challenges you probably need to know some C/C++, Assembler and also some experience with gdb (the gnu debugger). And maybe Ghidra. So this challenge is a great place to start Reversing, but unfortunately it's only 10 points because it's easier than other reversing challenges. It probably requires more skills than solving a 10 point Forensics problem like RubberDuck. If you solve the challenge you can use the flag to decrypt the sources and see how the challenge is created.
 
 Bất đầu từ bài này mình sẽ dùng kết hợp cả IDA và Ghidra (công dụng của 2 cái mình thầy như nhau, nhưng code assembly của IDA viết dễ đọc hơn, còn Ghidra lại có thể đào sâu hơn vào chương trình)
 
-Trước tiên là IDA:
+# Trước tiên là IDA:
 
 Mở chương trình bằng IDA 64 bit, chạy vào hàm main và decompile, thu được code:
 
@@ -118,6 +118,18 @@ __int64 __fastcall CheckFlag(const char *a1)
 }
 ```
 
-Số 21 chứng tỏ suy luaank trên là đúng :v 
+Số 21 chứng tỏ suy luận trên là đúng :v 
 
-dòng   ```if ( *((_DWORD *)&data + i) != a1[i] * a1[i] * a1[i] )``` chứng tỏ flag của chúng ta là căn bậc 3 của chuỗi được nhập, trong đó biến data chính là nơi chứa flag.
+dòng   ```if ( *((_DWORD *)&data + i) != a1[i] * a1[i] * a1[i] )``` chứng tỏ flag của chúng ta là căn bậc 3 của chuỗi được nhập, trong đó biến ```data``` chính là nơi chứa flag.
+
+Nhưng vấn đề là biến ```data``` được lưu ở đâu? mình quay lại hàm ```main``` và phát hiện một hàm lạ: ```InitData()```
+
+![alt_text](https://i.imgur.com/APyEXe9.png)
+
+Nhưng tuy nhiên sau khi vào hàm này mình chỉ thu được 1 dạy hex dài không thể sử dụng vào đâu được.
+
+![alt_text](https://i.imgur.com/x3mNltX.png)
+
+![alt_text](https://i.imgur.com/6u7VaFI.png)
+
+Và đó cũng chính là tất cả những gì mình có thể làm với IDA
