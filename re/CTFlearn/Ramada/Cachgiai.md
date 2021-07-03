@@ -139,5 +139,24 @@ Và đó cũng chính là tất cả những gì mình có thể làm với IDA
 Mở file bằng Code Brower của Ghidra, tìm đến hàm ```InitData``` <br/>
 ![alt_text](https://i.imgur.com/blBCx89.png)
 
+Sang mục decompile, thu được: 
+
 ![alt_text](https://i.imgur.com/knYJVqx.png)
 
+Đúng 21 biến, ứng với 21 kí tự chúng ta đang tìm.
+
+Ok, giờ chuyển hết tất cả từ ```hex``` sang ```dec```, sau đó lấy căn bậc 3, chuyển sang ```char``` là được chuỗi 21 kí tự cần tìm.
+
+code python:
+
+```python
+data = [0x13693, 0x6b2c0, 0x11a9f9, 0x157000,0x1cb91,0x1bb528,0x1bb528, 0xded21,0x144f38,0xfb89d,0x169b48,0xd151f,0x8b98b,0x17d140,0xded21,0x1338c0, 0x1338c0, 0x11a9f9, 0x1b000, 0x144f38, 0x1734eb]
+for i in data:
+    p = int(i)
+    for k in range(1, int(i/3)):
+        if p == k * k * k: print(chr(k))
+```
+
+Chay chương trình, thu được ```+Lip1zzaner_Stalli0ns```
+
+flag: CTFlearn{+Lip1zzaner_Stalli0ns}
