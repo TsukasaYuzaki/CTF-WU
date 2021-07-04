@@ -49,4 +49,12 @@ Phát hiện ra 1 điều là chương trình bắt chúng ta nhập flag trực
 
 Giờ mình sẽ nhập key bên trên thu được vào chương trình
 
-![alt_text](https://i.imgur.com/xggEQfd.png)
+![alt_text](https://i.imgur.com/SE5AOui.png)
+
+ok giờ bắt đầu tiến hành Debug
+
+Mình dùng lệnh ```x/300i``` để xem 300 lệnh đầu của hàm ```main```, sau đó phát hiện ```strcmp``` 
+
+![alt_text](https://i.imgur.com/YXNcizt.png)
+
+Mình sẽ đặt breakpoint ở đây
