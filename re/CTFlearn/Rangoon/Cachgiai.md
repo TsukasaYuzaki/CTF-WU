@@ -13,3 +13,40 @@ The LiveOverflow channel on YouTube has some great tutorials on reversing, this 
 Chuỗi ```CTFlearn{}``` sẽ chiếm 10 ký tự, sau đó mình để ý tập lệnh: <br/>
 
 ![alt_text](https://i.imgur.com/ncLdLu9.png)
+
+Từ lệnh ```mov rax, 1Ch``` mình rút được độ dài flag bài này là 0x1c (đổi sang ```dec``` thì là 28 ký tự)
+
+# => Chúng ta cần tìm 18 ký tự còn lại
+(10 ký tự đã biết là chuỗi CTFlearn{})
+=> key của chúng ta có dạng:<br/>
+key = "CTFlearn{ooooooooooooooooo}"
+
+Tiếp theo đó mình thu được vị trí của các dấu ```_``` ngăn cách giữa các tự:
+
+![alt_text](https://i.imgur.com/Cayzk9I.png)
+
+Đó là vị trí key[17] và key[22]
+
+=> Được key có dạng:
+
+key = "CTFlearn{oooooooo_oooo_oooo}"
+
+Đó là tất cả những mình có thể làm với IDA.
+
+Đọc qua IDa-view, mình có thể chắc chương trình này được viết bằng C => chắc chắn phải có hàm ```main```
+
+OK giờ mình sẽ sử dụng GDB(linux) để debug
+
+![alt_text](https://i.imgur.com/oDtVfyk.png)
+
+GDB của mình có cài thêm GEF rồi, nhưng không có cũng chả sao
+
+Đầu tiên mình chạy để chương trình nạp bộ nhớ trước
+
+![alt_text](https://i.imgur.com/xggEQfd.png)
+
+Phát hiện ra 1 điều là chương trình bắt chúng ta nhập flag trực tiếp trong lệnh mở luôn, chứ không đợi vào chương trình mới yêu cầu nhập.
+
+Giờ mình sẽ nhập key bên trên thu được vào chương trình
+
+![alt_text](https://i.imgur.com/xggEQfd.png)
