@@ -15,7 +15,7 @@ từ lệnh ```cmp     rax, 1Eh``` mình rút ra được độ dài của flag 
 
 Nếu bê nguyên cách giải của [bài trước](https://github.com/TsukasaYuzaki/CTF-WU/blob/main/re/CTFlearn/Reykjavik/Cachgiai.md) cho bài này, thì chúng ta phải viết code để XOR từng này mảng:
 
-![alt_text]((https://i.imgur.com/b2tFq3A.png)
+![alt_text](https://i.imgur.com/b2tFq3A.png)
 
 Mỗi một hàm (bên trái) sẽ tương đương với từng đó lần XOR
 
