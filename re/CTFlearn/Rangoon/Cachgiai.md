@@ -14,7 +14,7 @@ Chuỗi ```CTFlearn{}``` sẽ chiếm 10 ký tự, sau đó mình để ý tập
 
 ![alt_text](https://i.imgur.com/ncLdLu9.png)
 
-Từ lệnh ```mov rax, 1Ch``` mình rút được độ dài flag bài này là 0x1c (đổi sang ```dec``` thì là 28 ký tự)
+Từ lệnh ```cmp rax, 1Ch``` mình rút được độ dài flag bài này là 0x1c (đổi sang ```dec``` thì là 28 ký tự)
 
 # => Chúng ta cần tìm 18 ký tự còn lại
 (10 ký tự đã biết là chuỗi CTFlearn{})
