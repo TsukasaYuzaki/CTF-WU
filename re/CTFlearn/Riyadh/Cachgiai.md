@@ -29,6 +29,54 @@ OK! giờ là lúc dùng GDB:
 
 ![alt_text](https://i.imgur.com/iihNpHe.png)
 
+(Nhớ chạy chương trình bằng lệnh ```run``` trước để nó nạp bộ nhớ)
+
 Sau đó mình xem code assembly của hàm ```main``` bằng lệnh:
 
 ![alt_text](https://i.imgur.com/wL1lF4d.png)
+
+Thấy hàm ```strcmp```
+
+![alt_text](https://i.imgur.com/9wopALo.png)
+
+ok giờ đặt breakpoint ở đây:
+
+![alt_text](https://i.imgur.com/F7UQdpo.png)
+
+ Mình thử chạy chương trình luôn (bằng lệnh ```run``` )mà không nhập flag vào 
+ 
+ ![alt_text](https://i.imgur.com/LJshsfB.png)
+ 
+ flag của chúng ta chứa trong thanh ```rsi```, ngoài ra còn thu được 1 flag giả trong ```rdx```
+ 
+ ![alt_text](https://i.imgur.com/Oxa6RJo.png)
+ 
+ (Vì flag của chúng ta thu được bên trên có 30 ký tự, nhưng chuỗi "CTFlearn{Reversing_Is_Easy}" chỉ có 27 ký tự)
+ 
+ Nhưng giờ là lúc các hàm XOR (thu được khi phân tích file bằng IDA) làm việc:
+ 
+ ![alt_text](https://i.imgur.com/l6Y0fuC.png)
+ 
+ Mình để ý khi phân tích hàm ```main``` ra code assembly (lệnh ```disassemble main```), chúng ta có 1 số hạm lạ là: ```_Z4Msg2Pc```, ```_Z4Msg4Pc```,...
+ 
+ Đây chính là các hàm XOR
+ 
+ Giờ mình sẽ chạy lại từ đầu, nhưng là nhập đủ 30 ký tự
+ 
+ ![alt_text](https://i.imgur.com/rDWjRdy.png)
+ 
+Mình tiếp tục cho chương trình chạy bằng lệnh ```ni```
+
+Cứ tiếp tục ```ni``` cho đến khi chương trình chạy đến địa chỉ:
+
+![alt_text](https://i.imgur.com/cmBKzNK.png)
+
+Có thể thấy được sau bước này, input của chúng ta được đẩy xuống ```r13```
+
+![alt_text](https://i.imgur.com/YpnImQK.png)
+
+và flag sau khi được XOR nằm trong ```rdx```
+
+![alt_text](https://i.imgur.com/VNHCO6U.png)
+
+flag: CTFlearn{Masmak_Fortress_1865}
