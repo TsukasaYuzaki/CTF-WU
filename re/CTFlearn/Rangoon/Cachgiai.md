@@ -65,7 +65,7 @@ Ok giờ mình chạy chương trình bằng dạng key tìm được trên kia.
 
 ![alt_text](https://i.imgur.com/95emq4w.png)
 
-Sau khi chạm breakpoint, chjuowng trình dừng lại, chúng ta có thể dễ dàng thấy được input của chúng ta được lưu trong ```rdi```
+Sau khi chạm breakpoint, chương trình dừng lại, chúng ta có thể dễ dàng thấy được input của chúng ta được lưu trong ```rdi```
 
 ![alt_text](https://i.imgur.com/2Wc19Zz.png)
 
