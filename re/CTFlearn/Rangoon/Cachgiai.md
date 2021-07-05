@@ -58,3 +58,20 @@ Mình dùng lệnh ```x/300i``` để xem 300 lệnh đầu của hàm ```main``
 ![alt_text](https://i.imgur.com/YXNcizt.png)
 
 Mình sẽ đặt breakpoint ở đây
+
+![alt_text](https://i.imgur.com/HZOMer7.png)
+
+Ok giờ mình chạy chương trình bằng dạng key tìm được trên kia.
+
+![alt_text](https://i.imgur.com/95emq4w.png)
+
+Sau khi chạm breakpoint, chjuowng trình dừng lại, chúng ta có thể dễ dàng thấy được input của chúng ta được lưu trong ```rdi```
+
+![alt_text](https://i.imgur.com/2Wc19Zz.png)
+
+Còn chuỗi được so sánh sẽ nằm trong ```rsi```
+
+![alt_text](https://i.imgur.com/N08ag3P.png)
+
+flag: CTFlearn{Princess_Maha_Devi}
+
