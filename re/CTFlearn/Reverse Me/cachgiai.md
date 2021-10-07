@@ -35,5 +35,58 @@ Tiếp tục một hai lần nữa, mình có tất cả các giá trị đều 
 
 Đó chính là flag, sau khi đã được ```encrypt``` và ```shuffle```
 
+giờ ta đi ngược lại, lấy mảng này shuffle, rồi giải mã ngược là được flag.
 
+Trước tiên là hàm ```Shuffle``` được viết khá đơn giản
 
+![alt_text](https://i.imgur.com/u0gcmvf.png)
+
+mình viết một đoạn code đơn giản: (đổi hết hex qua dec nha :D)
+
+```C
+include <iostream>
+using namespace std;
+
+int main(){
+        int arr[26] = {87, 66, 75, 69, 204, 187, 129, 204, 113, 122, 113, 102, 223, 187, 134, 2>
+        int flag[26];
+        int i, j;
+        for(i = 0; i<26; i = i + 2){
+                flag[i] = arr[i + 1];
+        }
+        for(j = 1; j < 26; j = j + 2){
+                flag[j] = arr[j - 1];
+        }
+        for(i = 0; i<26; i++){
+                cout << flag[i] << ", ";
+        }
+        return 0;
+}
+```
+
+chạy chương trình, được 
+```66, 87, 69, 75, 187, 204, 204, 129, 122, 113, 102, 113, 187, 223, 205, 134, 111, 100, 92, 110, 173, 242, 216, 154, 111, 126```
+
+đó chính là flag sau khi qua hàm ```encrypt```
+
+ok giờ xem hàm ```encrypt```
+
+![alt_text](https://i.imgur.com/7Z40Ksf.png)
+
+chỉ là mã hóa bằng 1 lệnh XOR đơn giản
+
+Code giải mã: 
+
+```python
+flagde = [66, 87, 69, 75, 187, 204, 204, 129, 122, 113, 102, 113, 187, 223, 205, 134, 111, 100,>
+
+v5 = [1, 3, 3, 7 ,222, 173, 190, 239]
+
+for i in range(26):
+        print(chr(flagde[i] ^ v5[i % 8]))
+
+```
+
+Chạy là ra flag
+
+flag: CTFLearn{reversing_is_fun}
