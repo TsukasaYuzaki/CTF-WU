@@ -2,7 +2,7 @@ Load cả 2 file vào IDA thì thấy cả 2 đều có hơn 16000 function
 
 Hàm main trong 2 hàm chả làm gì ngoài việc in ra 2 dòng chữ
 
-![alt_text](https://i.imgur.com/PiynBLcmp x.png)
+![alt_text](https://i.imgur.com/PiynBLx.png)
 
 => Không phải nhập flag, mà phải tìm flag được giấu trong chương trình
 
