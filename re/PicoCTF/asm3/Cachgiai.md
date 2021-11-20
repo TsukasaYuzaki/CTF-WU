@@ -29,7 +29,7 @@ asm3:
 	<+8>:	shl    ax,0x10
 	eax: 0x0000
 	<+12>:	sub    al,BYTE PTR [ebp+0xe] // al -= 0xcf
-    eax: 0x0031
+  	eax: 0x0031
 	<+15>:	add    ah,BYTE PTR [ebp+0xf] //ah += 0xe6 //BYTE: 1
 	eax: 0xe631
 	<+18>:	xor    ax,WORD PTR [ebp+0x12] // Xor e631, e544 //WORD: 2
