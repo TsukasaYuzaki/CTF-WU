@@ -1,0 +1,43 @@
+```
+(0xd2c26416,0xe6cf51f0,0xe54409d5) 
+
+ebp + 0x8
+8:0x16
+9:0x64
+10:0xc2
+11:0xd2
+
+ebp + 0xc
+12:0xf0
+13:0x51
+14:0xcf
+15:0xe6
+
+ebp + 0x10
+16:0xd5
+17:0x09
+18:0x44
+19:0xe5
+
+asm3:
+	<+0>:	push   ebp
+	<+1>:	mov    ebp,esp
+	<+3>:	xor    eax,eax
+	eax: 0x00
+	<+5>:	mov    ah,BYTE PTR [ebp+0x9] //ah = 0x64
+	eax: 0x6400 
+	<+8>:	shl    ax,0x10
+	eax: 0x0000
+	<+12>:	sub    al,BYTE PTR [ebp+0xe] // al -= 0xcf
+    eax: 0x0031
+	<+15>:	add    ah,BYTE PTR [ebp+0xf] //ah += 0xe6 //BYTE: 1
+	eax: 0xe631
+	<+18>:	xor    ax,WORD PTR [ebp+0x12] // Xor e631, e544 //WORD: 2
+	eax: 0x0375
+	<+22>:	nop
+	<+23>:	pop    ebp
+	eax: 0x375
+	<+24>:	ret    
+  ```
+  
+  flag: 0x375
