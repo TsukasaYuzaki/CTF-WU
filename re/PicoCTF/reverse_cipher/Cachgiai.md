@@ -26,7 +26,7 @@ dễ thấy quá trình and(&) từ 8 đến 22 với 1 giống với từ 1 đ�
 
 Code giải mã: 
 
-```
+```python
 from z3 import *
 
 #picoCTF{w1{1wq85jc=2i0<} 
