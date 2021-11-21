@@ -61,5 +61,5 @@ for i in range(15):
 	print(chr(m[s1[i]].as_long()), end = '')
 ```
 
-Flag: r3v3rs37ee84d27
+Flag: picoCTF{r3v3rs37ee84d27}
 
