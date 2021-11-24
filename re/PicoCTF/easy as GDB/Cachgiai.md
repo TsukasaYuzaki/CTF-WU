@@ -22,7 +22,7 @@ Vậy nên mình đã tìm ra một cách khác:
 
 Sau 1 hồi debug với GDB, mình tìm ra được công dụng của 2 lệnh ```cmp``` trong hàm third:
 
-![alt_text]([img]https://i.imgur.com/yxySVYB.png[/img])
+![alt_text](https://i.imgur.com/yxySVYB.png)
 
 (Đương nhiên ở lệnh ```cmp``` thứ 2 là decrypt theo một cách khác nên dù có các giá trị cũng không suy ra flag được)
 
