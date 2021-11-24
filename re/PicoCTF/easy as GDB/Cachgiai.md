@@ -28,7 +28,7 @@ Sau 1 hồi debug với GDB, mình tìm ra được công dụng của 2 lệnh 
 
 Từ đó thấy được từ lệnh ```cmp dl, al```, nếu bằng thì giá trị ```eax += 1```, sau đó đem giá trị ```eax``` đó so sánh độ dài của flag đúng
 
-Vậy chương trình Encrypt từng kí tự một, các kí tự trong input lẫn độ dài của input đều không liên quan đến nhau, nghĩa là chỉ cần mình để input là một kí tự bất kì như ```u``` thì sau khi Encrypt vẫn là 1 kí tự cố định nào đó, cho dùng input là ```uasdausd``` hay ```u```
+Vậy chương trình Encrypt từng kí tự một, các kí tự trong input lẫn độ dài của input đều không liên quan đến nhau, nghĩa là chỉ cần mình để input là một kí tự bất kì như ```u``` thì sau khi Encrypt vẫn là 1 kí tự cố định nào đó, cho dù input là ```uasdausd``` hay ```u```
 
 Mình viết 1 đoạn script lợi dụng điều này để bruteforce flag:
 
@@ -68,6 +68,8 @@ while "}" not in flag:
 ```
 
 Chạy là ra flag:
+
+
 ![alt_text](https://i.imgur.com/lXsGoxz.png)
 
 flag: picoCTF{I_5D3_A11DA7_358a9150}
