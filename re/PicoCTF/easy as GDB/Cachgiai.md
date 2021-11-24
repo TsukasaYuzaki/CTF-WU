@@ -32,11 +32,12 @@ Vậy chương trình Encrypt từng kí tự một, các kí tự trong input l
 
 Mình viết 1 đoạn script lợi dụng điều này để bruteforce flag:
 
-```python               
+```python    
+           
 from pwn import *
 
 p = process(["gdb", "./brute"])
-p.recvuntil("gef➤  ")
+p.recvuntil("gef➤  ")#GDB của mình có cài gef, nên khi tương tác dòng lệnh sẽ là gef➤ thay vì (gdb)
 p.sendline("b *0x5655598e")
 p.recvuntil("gef➤  ")
 testcase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ{}_?"
