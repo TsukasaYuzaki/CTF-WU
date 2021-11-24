@@ -39,7 +39,7 @@ p = process(["gdb", "./brute"])
 p.recvuntil("gef➤  ")
 p.sendline("b *0x5655598e")
 p.recvuntil("gef➤  ")
-testcase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQ>
+testcase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ{}_?"
 flag = ""
 c = len(flag)
 while "}" not in flag:
