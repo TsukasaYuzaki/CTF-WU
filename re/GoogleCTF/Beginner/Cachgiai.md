@@ -38,7 +38,7 @@ mình sẽ tạo 3 list, 1 list sử là input ban đầu, 1 list cho input sau 
 
 code python giải cả bài:
 
-```
+```python
 from z3 import *
 
 XOR =   [0xAAF986EB, 0x34F823D4, 0x385F1A8D, 0x49B45876][::-1]
