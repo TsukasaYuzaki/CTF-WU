@@ -71,7 +71,7 @@ for j in range(0, 100):
         second = 0
         print("Trying: " + key)
         for i in testcase:
-                p.sendline("run " + key + i + "1"* (99-j) )
+                p.sendline("run " + key + i + "1"* (99-j) ) #input cần có đủ 100 kí tự, nên dò được bao nhiêu thì bỏ bấy nhiêu kí tự fake
                 p.recvuntil("gef➤  ")
                 p.sendline("x/s $rsi")
                 first = (p.recvuntil("gef➤  "))
