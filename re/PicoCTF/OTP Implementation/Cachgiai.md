@@ -35,3 +35,68 @@ Nhưng có vẻ hơi khó vì trong hàm jumble có chia dư nên dò các kí t
 
 Vì thế mình làm theo cách khác, để ý hàm jumpble chỉ mã hóa từng kí tự riêng biệt, nên dù nhập input thế nào thì sau cùng các kí tự trong input đó đều bị mã hóa như nhau,
 khá giống bài [easy as GDB](https://github.com/TsukasaYuzaki/CTF-WU/blob/main/re/PicoCTF/easy%20as%20GDB/Cachgiai.md)
+
+Nên mình chỉ cần đặt breakpoint ở lệnh ```call _strncmp``` trong hàm main:
+
+![alt_text](https://i.imgur.com/8NSPKsb.png)
+
+Rồi đem so sánh input (Sau khi bị jumble mã hóa) với key có trong bài
+
+![alt_text](https://i.imgur.com/Xx0NtAf.png)
+
+Ok, giờ ```run``` và nhập đủ 100 kí tự vào và thấy được cách các kí tự bị mã hóa rồi so sánh với chuỗi trong bài.
+
+Có thể chây lỳ làm thế, hoặc có thể bruteforce bằng code:
+
+```python
+from pwn import *
+
+p = process(["gdb", "./otp"])
+p.recvuntil("gef➤  ")
+#p.sendline("break *0x0000555555400630")
+
+
+p.sendline("break *0x0000555555400630")
+p.recvuntil("gef➤  ")
+
+testcase="0123456789abcdef"
+key=""
+"""
+first = (p.recvuntil("gef➤  "))
+print(first)
+"""
+
+for j in range(0, 100):
+        first = 0
+        second = 0
+        print("Trying: " + key)
+        for i in testcase:
+                p.sendline("run " + key + i + "1"* (99-j) )
+                p.recvuntil("gef➤  ")
+                p.sendline("x/s $rsi")
+                first = (p.recvuntil("gef➤  "))
+                print(first)
+                #print(first[31])
+                p.sendline("x/s $rdi")
+                second = (p.recvuntil("gef➤  "))
+                print(second)
+                if ((first[31+j]) == (second[31+j])):
+                        #print(chr(first[48+j]))
+                        print(" ")
+                        #print(chr(second[48+j]))
+                        key += i
+                        break
+print("Solved! key: " +key)
+
+```
+
+ok việc còn lại là chạy và đợi vài phút để chương trình bruteforce flag, khá lâu vì cần bruteforce 100 kí tự lận.
+
+![alt_text](https://i.imgur.com/LZ5Ecf8.png)
+
+Ok giờ đem XOR cái này với flag.txt (http://xor.pw/#)
+
+![alt_text](https://i.imgur.com/xgcaQWu.png)
+
+flag: picoCTF{cust0m_jumbl3s_4r3nt_4_g0Od_1d3A_e3647c08}
+
