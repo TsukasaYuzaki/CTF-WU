@@ -1,4 +1,4 @@
-Bài này tác giả cố tình cho thêm tùy chọn "-v" để chương trình dễ đi, và có thể lợi dụng điều đó để Brute force một các dễ dàng
+Bài này tác giả cố tình cho thêm tùy chọn "-v" để chương trình dễ đi, và có thể lợi dụng điều đó để Brute force một cách dễ dàng
 
 Mình sẽ giải theo 2 cách, cách 1 là Brute force (Vét cạn)
 
