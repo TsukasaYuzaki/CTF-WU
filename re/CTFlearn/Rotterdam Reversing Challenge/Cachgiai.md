@@ -80,7 +80,7 @@ Sau khi mul:
 
 ![alt_text](https://i.imgur.com/I4eHjGo.png)
 
-=> Giá trị nhân ra đầy đủ của chúng ta là: 0x6A8754493837F7D400A77B9BE
+=> Giá trị nhân ra đầy đủ của chúng ta là: 0x6A8754493837F7D400A77B9BE0
 
 Nên lấy cái này chia lại cho 0xdeb4fa4d998c32ff là được 
 
