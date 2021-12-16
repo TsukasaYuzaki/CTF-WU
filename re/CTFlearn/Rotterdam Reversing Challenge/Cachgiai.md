@@ -66,7 +66,7 @@ Tiếp theo là kiểm tra ký tự "_"
 
 => flag: Rotterda_P0rt_Rh1ne_
 
-# Step 6: Thuật toán mul
+# Step 5: Thuật toán mul
 
 Đây là một thuật toán khá hay vì nó ảnh hưởng đến 2 thanh ghi
 
@@ -102,3 +102,4 @@ Bước tiếp theo là ktra "_"
 
 => flag: Rotterda_P0rt_Rh1ne_Bl1tz_
 
+# Step 6: Thuật toán div
