@@ -21,9 +21,13 @@ Giá trị trong rbx có thể tìm được bằng cách debug bằng GDB
 
 Ok giờ chỉ việc lấy giá trị này xor ngược lại với 0x4B227FF781D59A56 là ra step1
 
+=> flag: Rotterda
+
 ![alt_text](https://i.imgur.com/nJDNuR6.png)
 
 # Step 2: đơn giản chỉ là kiểm tra ký tự tiếp theo có phải là "_" hay không
+
+=> flag: Rotterda_
 
 ![alt_text](https://i.imgur.com/bQcbOvO.png)
 
@@ -32,3 +36,69 @@ Ok giờ chỉ việc lấy giá trị này xor ngược lại với 0x4B227FF78
 rax = rax + rbx trong đó, rbx là input của chúng ta, giá trị rax sau khi add so sánh với 0x15764FF46
 
 -> lấy giá trị khi so sánh trừ rax trước khi add là được input đúng
+
+![alt_text](https://i.imgur.com/MeXTmcj.png)
+
+![New Bitmap Image (3)](https://user-images.githubusercontent.com/84331340/146403244-73cd9ef6-d308-4f9b-b38f-2c80215ac4a4.png)
+
+=> flag: Rotterda_P0rt
+
+# Step 4: Thuật toán and
+
+Đây là step mình mất nhiều thời gian nhất vì nó sử dụng thuật toán chía dư 
+
+(n % 2^i = n & (2^i - 1))
+
+Nhưng sau vài tiếng loáy hoáy thì mình nhận ra mấu chốt không nằm ở đây, tại vì cái so sánh của nó là jb chứ không phải je hay jne (jb: jump below, je: jump equal, 
+jne: jump not equal), nên nhìn đoạn sau thì dễ hẳn, chỉ là thuật toán sub
+
+![alt_text](https://i.imgur.com/8JhScw7.png)
+
+![alt_text](https://i.imgur.com/oi6yGyT.png)
+
+Nên việc còn lại quá đơn giản
+
+![alt_text](https://i.imgur.com/1OjOsY9.png)
+
+=> flag: Rotterda_P0rt_Rh1ne
+
+Tiếp theo là kiểm tra ký tự "_"
+
+=> flag: Rotterda_P0rt_Rh1ne_
+
+# Step 6: Thuật toán mul
+
+Đây là một thuật toán khá hay vì nó ảnh hưởng đến 2 thanh ghi
+
+Sau khi mul, thì dó số quá to, nên sẽ chia ra làm 2 phần: 
+
+Trước khi mul:
+
+![alt_text](https://i.imgur.com/XSYKhwy.png)
+
+Sau khi mul:
+
+![alt_text](https://i.imgur.com/I4eHjGo.png)
+
+=> Giá trị nhân ra đầy đủ của chúng ta là: 0x6A8754493837F7D400A77B9BE
+
+Nên lấy cái này chia lại cho 0xdeb4fa4d998c32ff là được 
+
+Mình dùng python, tại IDA số to quá k chia được :V
+
+Code: 
+
+```python
+a = 0x6A8754493837F7D400A77B9BE0
+
+b = 0xdeb4fa4d998c32ff
+
+print(hex(int(a/b)))
+```
+
+![alt_text](https://i.imgur.com/uY0c64G.png)
+
+Bước tiếp theo là ktra "_"
+
+=> flag: Rotterda_P0rt_Rh1ne_Bl1tz_
+
