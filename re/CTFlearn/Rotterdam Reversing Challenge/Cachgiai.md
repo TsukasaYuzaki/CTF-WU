@@ -103,3 +103,19 @@ Bước tiếp theo là ktra "_"
 => flag: Rotterda_P0rt_Rh1ne_Bl1tz_
 
 # Step 6: Thuật toán div
+
+Đoạn này sẽ xem ký tự cuối trong flag của chúng ta có phải là 5 kí tự không, nếu nhiều hơn sẽ thoát chương trình
+
+![alt_text](https://i.imgur.com/tUtrpGt.png)
+
+Thuật toán này khá là giống thuật toán nhân mul bên trên, nhưng lúc này rdx giữ phần dư của phép chia
+
+![alt_text](https://i.imgur.com/Th0LKte.png)
+
+=> đáp số của chúng ta là số bị chia, sao cho khi lấy rax (= 0x1f6ff5218c40de9c) chia cho số đó thì được thương 0x4F5352 và dư 0x55930DBBE
+
+=> lấy rax trừ đi số dư rồi chia cho thương là được input cần nhận
+
+![alt_Text](https://i.imgur.com/tZSCieN.png)
+
+=> flag: CTFlearn{Rotterda_P0rt_Rh1ne_Bl1tz_W1tte}
