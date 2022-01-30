@@ -30,4 +30,7 @@ Nói chúng là chạy khi debug thì nó set bit cho [edi+2] (còn edi đang tr
 
 ![s](https://user-images.githubusercontent.com/84331340/151706310-2fa31ac0-958c-48dd-b7e2-7089b6a04f3f.jpg)
 
+![Uploading s.jpg…]()
+
+
 
