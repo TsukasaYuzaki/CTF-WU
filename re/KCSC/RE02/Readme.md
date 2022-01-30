@@ -5,8 +5,11 @@
 Nói đơn giản thì sẽ là thế này
 
 f[0] = f[2] ^ 0xc0
+
 f[1] = f[3] ^ 1
+
 f[2] = f[1] ^ 0xf0
+
 f[3] = f[0] ^ 0xd
 
 Với f[] là chuỗi kí tự đọc được từ file, cứ luân phiên như vậy đến khi hết chuỗi kí tự đọc được.
