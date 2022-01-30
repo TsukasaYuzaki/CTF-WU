@@ -79,6 +79,7 @@ for i in range(len(lit)):
 ```
 
 
-![c](https://user-images.githubusercontent.com/84331340/151705106-801ff5e5-756f-4eed-ac67-1fb7b1f109a4.jpg)
+![c](https://user-images.githubusercontent.com/84331340/151705146-5e5cd9fa-e272-4b9d-a034-bf3a935dea75.jpg)
 
 flag: KCSC{welc9me_t9_my_chall3ng3_easy_byte_reverse}
+
