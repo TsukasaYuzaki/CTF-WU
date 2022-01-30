@@ -38,7 +38,7 @@ Nhanh trí đổi lệnh jn sang jnz, bởi vì [edi] ngoài check debug ra ch�
 
 ![New Bitmap Image](https://user-images.githubusercontent.com/84331340/151706606-0f358078-9c46-4a4d-a873-0095009d6ddc.jpg)
 
-Ok giờ chạy lại file là được với breakpoint ỏ bị trí so sánh số là được!
+Ok giờ chạy lại file với breakpoint ở bị trí so sánh số là được!
 
 ![s](https://user-images.githubusercontent.com/84331340/151706086-2d97e512-7abd-48bf-b77b-fc177fa3bf6f.jpg)
 
