@@ -53,4 +53,4 @@ Có vẻ như bước khó nhất của bài này là căng mắt ra mà đọc 
 
 ![Untitled](https://user-images.githubusercontent.com/84331340/151707091-030d6fab-fec1-45e1-b904-07824a62920e.png)
 
-flag: KCSC{w3llc0m3_t0_KCSC_<3} (hình như z)
+flag: KCSC{W3llc0m3_t0_KCSC_<3} (hình như z)
